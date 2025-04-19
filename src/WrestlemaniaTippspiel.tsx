@@ -4,7 +4,9 @@ import { useState } from 'react';
 import { supabase } from './supabaseClient'; // Supabase-Verbindung hier importieren
 import { Input } from './components/ui/input';
 import { Button } from './components/ui/button';
-import { Card, CardContent } from './components/ui/card';
+//import { Card, CardContent } from './components/ui/card';
+import { Card } from './components/ui/card';
+import { CardContent } from '@mui/material';
 
 const matches = [
   'Rey Mysterio vs. El Grande Americano',
@@ -46,8 +48,8 @@ export default function WrestlemaniaTippspiel() {
       created_at: new Date().toISOString(),
     };
 
-    const { data, error } = await supabase.from('predictions').insert([payload]);
-
+    //const { data, error } = await supabase.from('predictions').insert([payload]);
+    const {  error } = await supabase.from('predictions').insert([payload]);
     if (error) {
       console.error('Fehler beim Absenden:', error);
       alert('❌ Es gab ein Problem. Bitte versuch es nochmal.');
