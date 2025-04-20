@@ -44,6 +44,7 @@ function App() {
             </button>
           </Link>
         </nav>
+        {/* Routes */}
         <Routes>
           <Route
             path="/"
@@ -54,7 +55,6 @@ function App() {
               </>
             }
           />
-          <Route path="/" element={<WrestlemaniaTippspiel />} />
           <Route path="/auswertung/manuel" element={<Auswertung />} />
           <Route path="/auswertung/michael" element={<Auswertung2 />} />
           <Route path="/auswertung/dario" element={<Auswertung3 />} />
