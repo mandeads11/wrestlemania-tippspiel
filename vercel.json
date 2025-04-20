@@ -1,12 +1,14 @@
 {
-  "rewrites": [
+  "builds": [
     {
-      "source": "/about",
-      "destination": "/about-page"
-    },
+      "src": "package.json",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
     {
-      "source": "/contact",
-      "destination": "/contact-page"
+      "src": "/(.*)",
+      "dest": "/"
     }
   ]
 }
